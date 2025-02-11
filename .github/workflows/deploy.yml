@@ -25,6 +25,7 @@ jobs:
           sudo apt-get install -y ruby-full jq
           sudo gem install bundler
           npm install -g @shopify/cli@3.70.0
+          npm install
 
       - name: Build Theme
         run: npm run build
