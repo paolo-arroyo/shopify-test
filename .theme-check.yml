@@ -1,0 +1,8 @@
+root: .
+
+exclude:
+  "frontend/web/**": true
+
+ValidSchema:
+  enabled: true
+  severity: warning

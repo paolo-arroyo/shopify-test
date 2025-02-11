@@ -1,0 +1,6 @@
+[environments.dev]
+store = "paoloarroyo-test.myshopify.com"
+ignore = ["frontend/","package.json","package-lock.json","**/*.json"]
+
+[environments.prod]
+store = "paoloarroyo-test.myshopify.com"
