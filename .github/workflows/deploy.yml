@@ -36,4 +36,8 @@ jobs:
           SHOPIFY_STORE: ${{ secrets.SHOPIFY_STORE }}
           SHOPIFY_PASSWORD: ${{ secrets.SHOPIFY_PASSWORD }}
         run: |
-          shopify theme push --password=$SHOPIFY_PASSWORD --store=$SHOPIFY_STORE --theme=$SHOPIFY_THEME_ID --json
+          shopify theme push \
+            --json \
+            --theme ${{ secrets.SHOPIFY_THEME_ID }} \
+            --store ${{ secrets.SHOPIFY_STORE }} \
+            --password ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
