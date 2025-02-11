@@ -25,17 +25,10 @@ jobs:
           sudo apt-get install -y ruby-full jq
           sudo gem install bundler
           npm install -g @shopify/cli@3.70.0
-
-      - name: Install Bun
-        uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: latest
-
-      - name: Install Dependencies
-        run: bun install
+          npm install vite vite-shopify-plugin
 
       - name: Build Theme
-        run: bun run build
+        run: npm run build
 
       - name: Push Theme to Shopify
         env:
